@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy 10 Months ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  min-height:100vh;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px
+}
+.front-page{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:10
+}
+.front-card{
+  background:#fff;
+  padding:45px 32px;
+  border-radius:26px;
+  text-align:center;
+  box-shadow:0 25px 60px rgba(0,0,0,0.3);
+  animation:floatIn 2.5s ease;
+  max-width:360px
+}
+.front-heart{
+  font-size:44px;
+  color:#ff4d6d;
+  margin-bottom:12px;
+  animation:beat 1.6s infinite
+}
+.front-card h1{
+  font-family:'Dancing Script',cursive;
+  font-size:42px;
+  color:#ff4d6d
+}
+.poem{
+  margin:18px 0 26px;
+  font-size:15px;
+  line-height:1.8;
+  color:#555;
+  font-style:italic
+}
+button{
+  border:none;
+  background:#ff4d6d;
+  color:#fff;
+  padding:12px 24px;
+  border-radius:25px;
+  font-size:15px;
+  cursor:pointer;
+  transition:transform .2s ease;
+  margin:6px
+}
+button:hover{transform:scale(1.05)}
+
+.card{
+  display:none;
+  background:#fff;
+  max-width:420px;
+  width:100%;
+  border-radius:20px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
+  animation:fadeIn 1.5s ease
+}
+h1{
+  font-family:'Dancing Script',cursive;
+  font-size:38px;
+  color:#ff4d6d;
+  margin-bottom:10px
+}
+h2{
+  font-size:18px;
+  font-weight:400;
+  color:#555;
+  margin-bottom:15px
+}
+.heart{
+  font-size:38px;
+  margin:10px 0 15px;
+  animation:beat 1.5s infinite
+}
+.photos{
+  display:none;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:20px
+}
+.photos img{
+  width:90px;
+  height:90px;
+  object-fit:cover;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+  opacity:0;
+  animation:fadePhoto 1.5s ease forwards
+}
+.photos img:nth-child(1){animation-delay:1.14s}
+.photos img:nth-child(2){animation-delay:3.14s}
+.photos img:nth-child(3){animation-delay:5.14s}
+.photos img:nth-child(4){animation-delay:7.14s}
+.photos img:nth-child(5){animation-delay:9.14s}
+.photos img:nth-child(6){animation-delay:11.14s}
+
+p{
+  font-size:15px;
+  color:#444;
+  line-height:1.6;
+  margin-bottom:15px
+}
+.footer{
+  font-size:14px;
+  color:#777;
+  margin-top:10px
+}
+.sorry-text{
+  display:none;
+  font-size:14px;
+  color:#444;
+  margin-top:10px
+}
+.final-line{
+  margin-top:18px;
+  font-family:'Dancing Script',cursive;
+  font-size:26px;
+  color:#ff4d6d;
+  opacity:0;
+  animation:fadeFinal 3s ease forwards;
+  animation-delay:8s
+}
+
+@keyframes beat{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.2)}
+}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadePhoto{
+  from{opacity:0;transform:scale(.9)}
+  to{opacity:1;transform:scale(1)}
+}
+@keyframes fadeFinal{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes floatIn{
+  from{opacity:0;transform:translateY(40px) scale(.95)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- FRONT PAGE -->
+<div class="front-page" id="frontPage">
+  <div class="front-card">
+    <div class="front-heart">❤</div>
+    <h1>For You</h1>
+    <p class="poem">
+      Ten months, a thousand moments,<br>
+      quiet smiles and loud dreams.<br>
+      In this little letter lives my heart,<br>
+      written softly… just for you.
+    </p>
+    <button onclick="openCard()">Open My Letter ✉️</button>
+  </div>
+</div>
+
+<!-- MAIN CARD -->
+<div class="card" id="mainCard">
+  <h1>Happy 10 Months</h1>
+  <h2>Our little journey together ❤️</h2>
+  <div class="heart">💖</div>
+
+  <div class="photos" id="photos">
+    <img src="https://files.catbox.moe/18qgr3.webp">
+    <img src="https://files.catbox.moe/brdxvg.jpg">
+    <img src="https://files.catbox.moe/1e39rj.jpg">
+    <img src="https://files.catbox.moe/m9lo7s.jpg">
+    <img src="https://files.catbox.moe/jyfudv.jpg">
+    <img src="https://files.catbox.moe/jhaxz9.jpg">
+  </div>
+
+  <p>
+    These 10 months have been full of smiles, memories, and moments I’ll always keep close.
+  </p>
+
+  <p>
+    Today we complete 10 months together, and it makes me really happy. In these months, we have shared smiles, small fights, and many beautiful moments. You make my days better just by being there. I’m thankful for your care, your support, and the love you give me. Being with you feels special, and I’m grateful to have you in my life. I hope we make many more memories together 💙✨
+  </p>
+
+  <button onclick="showSurprise()">Tap for a surprise 🎁</button>
+  <button onclick="showSorry()">Sorry 😔</button>
+
+  <div class="footer" id="msg"></div>
+  <div class="sorry-text" id="sorryMsg">
+    I'm sorry,I again lost your white hair band 😭😭<br>
+    It was on my side bag pocket but now it's not there
+  </div>
+
+  <div class="final-line">I choose you, always 🤍</div>
+
+  <audio id="bgMusic" src="https://files.catbox.moe/g6fs6y.mp3" preload="auto"></audio>
+</div>
+
+<script>
+let musicStarted = false;
+
+function openCard(){
+  document.getElementById('frontPage').style.display = 'none';
+  document.getElementById('mainCard').style.display = 'block';
+
+  const music = document.getElementById('bgMusic');
+  if(!musicStarted){
+    music.volume = 0.35;
+    music.play().catch(()=>{});
+    musicStarted = true;
+  }
+}
+
+function showSurprise(){
+  document.getElementById('msg').innerText =
+    "You mean a lot to me 🤍 Happy 10th month anniversary!";
+  document.getElementById('photos').style.display = 'flex';
+}
+
+function showSorry(){
+  document.getElementById('sorryMsg').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
